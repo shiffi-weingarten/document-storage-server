@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "f7e5b7ce-d001-4025-8f6d-987b441df6e7",
+		"name": "documents",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50177989",
+		"_collection_link": "https://tova61902-5722091.postman.co/workspace/tova61902's-Workspace~4343619c-98b0-4665-8db5-4732e79d6a49/collection/50177989-f7e5b7ce-d001-4025-8f6d-987b441df6e7?action=share&source=collection_link&creator=50177989"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/documents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"doc1\",\r\n  \"title\": \"ניסיון ראשון\",\r\n  \"content\": \"תוכן המסמך שלי\",\r\n  \"path\": \"root/folder1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/documents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/documents?sortBy=-title",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/documents?sortBy=-title",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"documents"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "-title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/documents",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"doc1\",\r\n  \"title\": \"כותרת מעודכנת\",\r\n  \"content\": \"תוכן חדש\",\r\n  \"path\": \"root/folder1\",\r\n  \"author\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/documents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/documents/doc1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/documents/doc1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"documents",
+						"doc1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/documents/doc1/create-pdf",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/documents/doc1/create-pdf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"documents",
+						"doc1",
+						"create-pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-id",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/history",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

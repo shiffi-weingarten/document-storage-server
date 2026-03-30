@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "In this exercise, you'll create a platform to store documents. The platform provides a simple way to create, update, and view documents, and to explore each document's history. The data will be stored in MongoDB collections.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^6.21.0",
+    "pdfkit": "^0.17.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  }
+}
